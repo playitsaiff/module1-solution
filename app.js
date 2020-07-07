@@ -12,7 +12,8 @@
     let numOr0=n=>isNaN(n)?0:n;
     $scope.checkIfTooMuch=function(){
       var numberArray=$scope.numbers.split(',');
-      var total=numberArray.reduce((a,b)=>numOr0(parseInt(a))+numOr0(parseInt(b)));
+      console.log(numberArray);
+      var total=numberArray.length
       console.log(total);
       if($scope.numbers===""){
         $scope.ans= "Please enter data first";
@@ -25,7 +26,6 @@
       else{
           $scope.ans= "Too much!";
       }
-      console.log("here it runs");
     }
     console.log($scope.ans);
   }
